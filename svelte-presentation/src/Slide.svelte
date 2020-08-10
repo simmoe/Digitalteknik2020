@@ -26,19 +26,26 @@
 
 <style>
     .end{
-        display:grid;
-        place-items:center;
         background-color:lightgray;
         height:60vh;
         border-radius:4px;
         box-shadow: 0 0 8px 2px lightgray;
-        animation: away 1s forwards;
+        animation: away 2s forwards;
     }
     @keyframes away {
-        from{
+        0%{
             height:60vh;
         }
-        to{
+        60%{
+            width:80vw;
+            height:0;
+        }
+        80%{
+            width:80vw;
+            height:0;
+        }
+        100%{
+            width:0;
             height:0;
         }
     }
@@ -73,10 +80,11 @@
 		justify-content:center;
 	}
 	img, video{
-		width:80vw;
-        /* height:80vh;
+		width:60vw;
+        margin:auto;
+        /* max-height:60vh;
         object-fit:cover;
-        object-position: top; */
+        object-position: center center;  */
 	}
     @media (max-width: 640px) {
 		h1 {

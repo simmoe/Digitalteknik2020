@@ -9,6 +9,10 @@
 		switch(event.key){
 			case 'ArrowRight': pos = pos < words.length-1 ? pos +1 : 0; break;
 			case 'ArrowLeft': pos = pos > 0 ? pos -1 : words.length -1; break;
+			case 'f': document.documentElement.requestFullscreen(); break;
+		}
+		if(!isNaN(event.key) && event.key <= words.length ){
+			pos = parseInt(event.key) 
 		}
 	}
 
@@ -23,7 +27,8 @@
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>
-<header style='width:{w}%'></header>
+<svelte:head><title>Digitalt Teknikfag 2020</title></svelte:head>
+<header style='width:{w}%'><title>Simon</title></header>
 <main>
 	{#if show}
 		<Slide content={words[pos]} end={words.length -1 == pos ? true : false}/>
