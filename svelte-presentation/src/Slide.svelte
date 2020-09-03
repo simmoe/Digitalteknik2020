@@ -11,6 +11,9 @@
     {#if content.text}
         <h2>{@html content.text}</h2>
     {/if}
+    {#if content.quote}
+        <h2 class='quote'>« {@html content.quote} »</h2>
+    {/if}
     {#if content.code}
         <pre><code>{content.code}</code></pre>
     {/if}
@@ -61,6 +64,11 @@
     }
     h1, h2{
         word-wrap: break-word;
+    }
+    .quote{
+        font-size: 2rem;
+        font-style: italic;
+        font-weight:100;
     }
     code{
         font-size:1.5rem;
