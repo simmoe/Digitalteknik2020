@@ -1,6 +1,6 @@
 <script>
 	export let name;
-	fetch('http://api.deezer.com/search?q=eminem')
+	fetch('https://api.deezer.com/search?q=eminem')
 		.then(res=>res.json())
 		.then(json=>console.log(json))
 </script>
