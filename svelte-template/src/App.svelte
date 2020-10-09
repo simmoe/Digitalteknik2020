@@ -2,9 +2,7 @@
 </script>
 
 <main>
-	<div>
-		<h1>Digital Teknik 2020</h1>
-	</div>
+	<h1>Digital Teknik 2020</h1>
 </main>
 
 <style>

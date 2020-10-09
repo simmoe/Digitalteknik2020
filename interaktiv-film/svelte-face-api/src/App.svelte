@@ -44,11 +44,20 @@ const detect = async () => {
 	t = setTimeout(detect, 1000)
 }
 
+const keyboard = async (event) => {
+	console.log(event.key)
+	switch(event.key){
+		case "s": await window.clearTimeout(t); t = null; mood = 'recognition paused'; break;
+		case "p": detect(); mood = 'loading models..'; break;
+	}
+}
+
+
 loadDetection()
 
 
 </script>
-
+<svelte:window on:keydown={keyboard}/>
 <main>
 {#if state=='load'}
 	<Jumper size="60" color="#FF3E00" unit="px" />

@@ -2,50 +2,48 @@ export const script = [
     {
         'id': 0,
         'title':'Intro',
-        'subtitle':'Click me to watch the intro',
+        'subtitle':'<p>You are a student at the FBI where a row of coincidential events led you to participate in a dificult murder investigation. Your first subject is the lifetime incarcerated mass murderer X. He is notorious for being both touchy and lying - be wise, and try to get as much out of him as you can...</p>',
         'clip': './assets/1.mov',
-        'question': "Do you take a right or a left?",
+        'question': "Show credentials?",
         'answers':[
             {
-                'title': "Click here to go to the first scenario",
+                'title': "agree and show your identity card even though it shows you are still a student at the FBI",
                 'destination': 1
             },
             {
-                'title': "Click here to go to the second scenario",
+                'title': "ask him something friendly about his life in the cell",
                 'destination': 2
             }
         ]
     },
     {
         'id': 1,
-        'title':'The first scenario',
-        'subtitle':'You chose the first scenario - press play',
+        'title':'Show identity card',
         'clip': './assets/a.mov',
-        'question': "Do you take a right or a left?",
+        'question': "Walk away?",
         'answers':[
             {
-                'title': "I want to go left",
+                'title': "Well.. seems you got caught there - get your stuff and come back some other time...",
                 'destination': 3
             },
             {
-                'title': "I want to go right",
-                'destination': 2
+                'title': "Maybe he won\'t take it so badly - why not try to admit and proceed...",
+                'destination': 4
             }
         ]
     },
     {
         'id': 2,
-        'title':'The second scenario',
-        'subtitle':'You chose the second scenario',
+        'title':'Don\'t show credentials',
         'clip': './assets/b.mov',
-        'question': "Where do you go now?",
+        'question': "Present questionaire?",
         'answers':[
             {
-                'title': "I want to go left",
+                'title': "Ask him to fill out the questionaire you were sent with",
                 'destination': 3
             },
             {
-                'title': "I want to go back to the beginning",
+                'title': "Na, let\'s try to ask something else",
                 'destination': 0
             }
         ]
@@ -53,13 +51,8 @@ export const script = [
     },
     {
         'id': 3,
-        'title':'The END',
-        'subtitle':'You chose the wrong scenario',
-        'action': {
-            'title':'Take me back to the beginnning',
-            'destination': 0,
-        },
-        'clip': './assets/b.mov',
+        'title': 'Questionaire..',
+        'clip': './assets/c.mov',
         'question': "Where do you go now?",
         'answers':[
             {
@@ -68,5 +61,21 @@ export const script = [
             },
         ]
 
+    },
+    {
+        'id':4,
+        'clip':'./assets/admit.mov',
+        'title':'Admit',
+        'question': "Sit down?",
+        'answers':[
+            {
+                'title': "Go on with the interview...",
+                'destination': 3
+            },
+            {
+            'title': "Somethings not right. Get out before he looses all confidence..",
+                'destination': 0
+            }
+        ]
     },
 ]
