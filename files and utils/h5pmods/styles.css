@@ -1,0 +1,26 @@
+.h5p-actions{
+    display:none;
+}
+div.h5p-interactive-book-status-header{
+}
+div.h5p-interactive-book-status{
+    background:green;
+    color:white;
+}
+div.h5p-interactive-book-navigation-maintitle{
+    background-color:greenyellow;
+}
+div.h5p-interactive-book-status-chapter .title {
+    color:white;
+}
+button.h5p-interactive-book-status-menu.h5p-interactive-book-status-menu-active{
+    background-color: greenyellow;
+}
+
+div.h5p-interactive-book-status-footer{
+    display:none;
+}
+
+div.h5p-interactive-book-content{
+    margin:4rem;
+}
