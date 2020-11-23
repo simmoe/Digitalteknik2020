@@ -1,12 +1,14 @@
 <page>
     <actionBar title="Svelte Native App" />
     <gridLayout>
-        <label class="info" horizontalAlignment="center" verticalAlignment="middle" textWrap="true">
-            <formattedString>
-                <span class="fas" text="&#xf135;" />
-                <span text=" {message}" />
-            </formattedString>
-        </label>
+        <!-- svelte-ignore a11y-label-has-associated-control -->
+        <label 
+            class="info" 
+            horizontalAlignment="center" 
+            verticalAlignment="middle" 
+            textWrap="true"
+            text={message}
+        />
     </gridLayout>
 </page>
 
@@ -15,9 +17,6 @@
 </script>
 
 <style>
-    .info .fas {
-        color: #3A53FF;
-    }
     .info {
         font-size: 20;
     }
