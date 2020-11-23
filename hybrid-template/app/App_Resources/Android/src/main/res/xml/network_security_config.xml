@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">it.nextkbh.dk</domain>
+        <domain includeSubdomains="true">interaktivbog.it.nextkbh.dk</domain>
+    </domain-config>
+</network-security-config>

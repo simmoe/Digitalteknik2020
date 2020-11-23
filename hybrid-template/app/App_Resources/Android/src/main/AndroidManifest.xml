@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="__PACKAGE__"
 	android:versionCode="1"
+	android:targetSandboxVersion="1"
 	android:versionName="1.0">
 
 	<supports-screens
@@ -15,6 +16,8 @@
 	<uses-permission android:name="android.permission.INTERNET"/>
 
 	<application
+		android:usesCleartextTraffic="true"
+		android:networkSecurityConfig="@xml/network_security_config"
 		android:name="com.tns.NativeScriptApplication"
 		android:allowBackup="true"
 		android:icon="@drawable/icon"

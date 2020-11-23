@@ -1,5 +1,9 @@
+<script>
+let message = "Blank Svelte Native App"
+</script>
+
 <page>
-    <actionBar title="Svelte Native App" />
+    <actionBar title="Svelte Native App"/>
     <gridLayout>
         <!-- svelte-ignore a11y-label-has-associated-control -->
         <label 
@@ -12,9 +16,6 @@
     </gridLayout>
 </page>
 
-<script lang="typescript">
-    let message: string = "Blank Svelte Native App"
-</script>
 
 <style>
     .info {
