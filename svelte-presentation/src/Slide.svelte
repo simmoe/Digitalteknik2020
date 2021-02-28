@@ -2,6 +2,7 @@
     import { scale } from 'svelte/transition'
     export let content
     export let end
+    let video
 </script>
 
 <div in:scale class='slide {end && 'end'}' on:click={ () => content.link ? window.open(content.link): ''}>
@@ -21,7 +22,7 @@
         <img src={content.img} alt='her er jeg'>
     {/if}
     {#if content.vid}
-        <video autoplay muted>
+        <video autoplay muted bind:this={video} on:click={()=>video.paused?video.play():video.pause()}>
             <source src="{content.vid}" type="video/mp4">
         </video>
     {/if}

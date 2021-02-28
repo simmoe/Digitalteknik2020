@@ -1,18 +1,11 @@
-<script lang="typescript">
-    let message = "Blank Svelte Native App"
+<script>
 </script>
 
 <page>
-    <actionBar title="Hybrid app" />
-    <gridLayout verticalAlignment="center">
-        <label text={message} class="info text-center"/>
-    </gridLayout>
+    <webView src="http://pddu2reep.it.nextkbh.dk" /> 
 </page>
 
 <style>
-    .info {
-        font-size: 20;
-    }
 </style>
 
 
