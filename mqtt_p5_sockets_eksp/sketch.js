@@ -122,7 +122,7 @@ function draw() {
 
 const mqttInit = () => {
   const clientId = 'mqttjs_' + Math.random().toString(16).substr(2, 8)
-  const host = 'ws://test.mosquitto.org:8080'
+  const host = 'wss://test.mosquitto.org:8081'
 
   const options = {
     keepalive: 300,
