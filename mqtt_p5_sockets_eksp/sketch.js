@@ -83,6 +83,7 @@ function reset(){
   m51.win = false
   m52.win = false
   m53.win = false
+  loop()
 }
 
 function finished(){
