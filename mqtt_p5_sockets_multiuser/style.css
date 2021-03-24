@@ -1,0 +1,55 @@
+*{
+    box-sizing:border-box;
+}
+
+canvas{
+    position:absolute;
+    z-index:-3;
+}
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    min-width:100vw;
+    display:grid;
+    place-items:center;
+}
+.nameBar{
+    padding:2rem;
+    background:white;
+    border-radius: 8px;
+    display:grid;
+    place-items:center;
+}
+
+.chatContainer{
+    position:fixed;
+    background:hotpink;
+    bottom:0;
+    width:100vw;
+    height:20%;
+    padding:2rem;
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+}
+.chatMessages{
+    overflow:scroll;
+    background:rgba(255,255,255,.4);
+    padding:2rem;
+}
+.chatInputContainer{
+    display:grid;
+    grid-template-columns: 7fr 1fr;
+}
+.hidden{
+    visibility:hidden;
+}
+.controlsContainer{
+    position:fixed;
+    width:100vw;
+    height:10%;
+    top:0;
+    left:0;
+    display:grid;
+    grid-template-columns:1fr;
+}
