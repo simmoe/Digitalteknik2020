@@ -42,10 +42,12 @@ function draw() {
       const obj = {type:'move', 'title':title, 'id':clientId, 'x': mouseX, 'y':mouseY}
       client.publish('videochannel', JSON.stringify(obj))
       members.map(member => {
+        noStroke()
+        fill(255,255,255,100)
+        ellipse(member.x, member.y, 64, 64)
         fill('white')
-        ellipse(member.x, member.y, 16, 16)
-        fill('darkblue')
-        text(member.title, member.x + 20 , member.y + 3)
+        textSize(32)
+        text(member.title, member.x + 20 , member.y + 8)
       })
     }
   }
@@ -71,7 +73,7 @@ const createControls = () => {
 const createChat = () => {
   chatContainer = createDiv().class('chatContainer')
   chatInputContainer = createDiv().class('chatInputContainer hidden')
-  let newMessage = createInput().class('message')
+  let newMessage = createInput().class('message').attribute('placeholder', 'skriv til de andre her')
   let send = createButton('send')
   chatInputContainer.child(newMessage)
   chatInputContainer.child(send)
@@ -95,11 +97,13 @@ const createChat = () => {
 
 const createNamebar = () => {
   let div = createDiv().class('nameBar')
+  let info = createP('Hej - velkommen til filmchat. Her kan du se film og chatte med andre i mens. Skriv dit navn og tryk enter for at komme i gang. ')
   let i = createInput(title).attribute('placeHolder', 'dit navn...')
   let b = createButton('ok')
+
+  div.child(info)
   div.child(i)
   div.child(b)
-  div.center()
   b.mouseClicked(()=>{
     title = i.value()
     div.hide()
