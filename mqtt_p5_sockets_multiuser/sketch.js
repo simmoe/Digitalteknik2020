@@ -109,6 +109,8 @@ const createNamebar = () => {
     div.hide()
     chatInputContainer.removeClass('hidden')
     controlsContainer.removeClass('hidden')
+    let movie = document.getElementById('movie')
+    movie.classList.add('visible')
   })
 }
 const mqttInit = () => {
