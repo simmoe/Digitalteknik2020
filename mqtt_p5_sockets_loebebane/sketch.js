@@ -3,7 +3,7 @@ let client
 //Vi skal bruge en knap man kan trykke start på og en til at resette spillet
 let startButton, resetButton
 //vi skal bruge to variabler til at tage tid i millisekunder og til at gemme starttidspunktet  
-let milliseconds, startTime = 0; 
+let milliseconds, seconds, startTime = 0; 
 //og en timer 
 let timer; 
 //og et DIV element til at vise tiden
@@ -48,7 +48,7 @@ function setup() {
     //så vi går de forskellige løbere igennem og ser hvem det er vi har fået besked fra
     runners.map( runner => {
       //når vi finder løberen tjekker vi at tiden i forvejen er 0 - og sætter så en sluttid 
-      if(topic.includes(runner.mqtt) && runner.time == 0) runner.time = milliseconds
+      if(topic.includes(runner.mqtt) && runner.time == 0) runner.time = seconds
     }) 
     //vi tjekker om alle løberes tider er sat 
     let anyMoreRunners = runners.find( runner => runner.time == 0 )
@@ -67,8 +67,9 @@ function startGame(){
 function showTime(){
   //vi sætter så milliseconds til antallet af millisekunder siden startTime
   milliseconds = new Date().getTime() - startTime 
-  let seconds = (milliseconds/1000).toFixed(2)
+  seconds = (milliseconds/1000).toFixed(2)
   timerDiv.html( seconds )
+  showStats()
 }
 
 //funktion der nulstiller spillet
