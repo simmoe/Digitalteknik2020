@@ -1,0 +1,43 @@
+*{
+    box-sizing:border-box;
+}
+
+canvas{
+    position:absolute;
+    z-index:-3;
+}
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    min-width:100vw;
+    display:grid;
+    place-items:center;
+}
+
+.hidden{
+    visibility:hidden;
+}
+.visible{
+    opacity:1;
+}
+
+.container{
+    display:grid;
+    justify-content:flex-start;
+    align-items:center;
+    gap:1rem;
+    width:40vw;
+    border:1px solid gray;
+    border-radius:1rem;
+    padding:4rem;
+    transition:all .5s ease-in-out;
+}
+
+
+.h-container{
+    grid-auto-flow:column;
+}
+.v-container{
+    grid-auto-flow:row;
+}

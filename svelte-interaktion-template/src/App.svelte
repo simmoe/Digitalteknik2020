@@ -21,13 +21,14 @@
 		waitForTransition = true
 		setTimeout( () => waitForTransition = false, 40)
 	}
+	let main
 
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>
-<header style='width:{w}%'><title>Simon</title></header>
 
-<main>
+<main bind:this={main}>
+	<header style='width:{w}%'><title>Simon</title></header>
 	{#if !waitForTransition}
 		{#if choices[pos]!= 'end'}
 			<!-- content here -->
@@ -35,7 +36,7 @@
 		{:else}
 			<div>
 				<h1>End</h1>
-				<div class="button" on:click={()=>{history=[];pos=0;end=false;}}>try again</div>
+				<div class="button" on:click={()=>{main.style.display = 'none'}}>close</div>
 			</div>
 		{/if}
 	{:else}
@@ -75,10 +76,11 @@
 		justify-content: start;
 		gap:2rem;
 		padding:0 2rem 0 2rem;
+		z-index:2;
 	}
 	.history-choice, .button{
 		height:4rem;
-		max-width:6rem;
+		max-width:8rem;
 		display:grid;
 		place-items:center;
 		border-radius:8px;
@@ -92,8 +94,12 @@
 	main {
 		width:100vw;
 		height:100vh;
+		background: cornsilk;
 		display:grid;
 		place-items:center;
+		position:fixed;
+		top:0;
+		left:0;
 	}
 	h1 {
 		color: #ff3e00;

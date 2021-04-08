@@ -1,0 +1,16 @@
+{
+    "description": "Funny quiz",
+    "content":
+    [
+        {
+            "q":"what is red?",
+            "answers":["a color", "a person", "an animal", "the queen og italy"],
+            "correct":1
+        },
+        {
+            "q":"what is red?",
+            "answers":["a color", "a person", "an animal", "the queen og italy"],
+            "correct":1
+        }
+    ]
+}
