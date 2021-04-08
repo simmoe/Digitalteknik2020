@@ -113,6 +113,7 @@ const createNamebar = () => {
     movie.classList.add('visible')
   })
 }
+
 const mqttInit = () => {
   const options = {
     keepalive: 300,
