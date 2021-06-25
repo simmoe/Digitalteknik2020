@@ -24,6 +24,8 @@
 		//if there is a background image in this words[pos] object, set it up..
 		setTimeout( () => show = true, 40)
 	}
+
+	const roll = setInterval(()=>{pos++;if(pos > words.length-1) pos = 0}, 10000)
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>

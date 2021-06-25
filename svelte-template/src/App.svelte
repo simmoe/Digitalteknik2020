@@ -1,8 +1,16 @@
 <script>
+	let counter = 10
+	const hejsa = () => { counter++}
+	$: reactive = counter/2
+
 </script>
 
+bind:scrollTopH={variable}
 <main>
 	<h1>Digital Teknik 2020</h1>
+	<input type="button" on:click={hejsa}>
+	<div >{counter}</div>
+	<div >{reactive}</div>
 </main>
 
 <style>

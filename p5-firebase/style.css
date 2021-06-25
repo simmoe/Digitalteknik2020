@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+}
+.chart{
+    width:80vw;
+    height:80vw;
+}
+#insertDiv{
+    position:absolute;
+    top:110vh;
+    left:10vw;
+    height:90vh;
+    width:80vw;
+    background:rgba(0,0,0,.6);
+    border-radius:1rem 1rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2vw;
+    padding:12vw 2vw 12vw 2vw;
+    transition:all .8s ease-in-out;
+}
+.show{
+    transform:translateY(-95vh);
+}
+
+#closeButton{
+    position:absolute;
+    color:white;
+    font-weight: bold;
+    top:1rem;
+    left:1rem;
+    cursor: pointer;
+}
+
+#insertDiv div{
+    height:100%;
+    background:white;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    font-size: 4vw;
+    color:gray;
+    cursor: pointer;
+}
